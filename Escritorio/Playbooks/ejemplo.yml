@@ -1,0 +1,13 @@
+---
+
+- name: crear un txt y escribir un mensaje
+  hosts: localhost
+  tasks: 
+   -  name: crear txt
+      shell: 'touch mensaje.txt'
+      
+   -  name: escribir en el txt
+      lineinfile: 
+        path: mensaje.txt
+        line: 'Holaaaaaa'
+      
